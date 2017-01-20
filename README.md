@@ -13,9 +13,9 @@ for the same game.
 http://www.etymonline.com/index.php?search=hyper
 
 **HyperWeiqi** provides the following game modes:
-human vs. human (hotseat)
-human vs. AI
-AI vs. AI
+* human vs. human (hotseat)
+* human vs. AI
+* AI vs. AI
 
 **HyperWeiqi** is written in Java and compiles with Maven.
 
