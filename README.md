@@ -5,11 +5,11 @@
 **HyperWeiqi** licensed under The GNU General Public License 3, or
 (at your option) any later version. See COPYING file.
 
-"weiqi" is the the Chinese name for the board game most widely known
+**"weiqi"** is the the Chinese name for the board game most widely known
 internationally for its Japanese name "go". "baduk" is the Korean name
 for the same game.
 
-"hyper" is Greek for "over, beyond, overmuch, above measure".
+**"hyper"** is Greek for "over, beyond, overmuch, above measure".
 http://www.etymonline.com/index.php?search=hyper
 
 **HyperWeiqi** provides the following game modes:
