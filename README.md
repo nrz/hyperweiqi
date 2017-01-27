@@ -24,4 +24,7 @@ http://www.etymonline.com/index.php?search=hyper
 Description and structure of topic can be found in
 [HyperWeiqi][descriptionAndStructureOfTopic.md].
 
+Time tracking can be found in
+[HyperWeiqi][timeTracking.md].
+
 Copyright (C) 2017 Antti Nuortimo.
