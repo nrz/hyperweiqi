@@ -19,4 +19,9 @@ http://www.etymonline.com/index.php?search=hyper
 
 **HyperWeiqi** is written in Java and compiles with Maven.
 
+## Documentation
+
+Description and structure of topic can be found in
+[HyperWeiqi][descriptionAndStructureOfTopic.md].
+
 Copyright (C) 2017 Antti Nuortimo.
