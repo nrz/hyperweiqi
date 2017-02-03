@@ -1,7 +1,7 @@
 package hyperweiqi.logic;
 
-import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.domain.Stone;
+import hyperweiqi.domain.StoneLocation;
 
 public class Move {
 
@@ -14,10 +14,10 @@ public class Move {
     }
 
     public Stone getStone() {
-        return stone;
+        return this.stone;
     }
 
     public StoneLocation getLocation() {
-        return location;
+        return this.location;
     }
 }
