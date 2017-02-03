@@ -1,5 +1,9 @@
 package hyperweiqi.domain;
 
+import hyperweiqi.logic.Move;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
 
     private final int boardSize;
@@ -8,6 +12,7 @@ public class Game {
     private StoneLocation ko;
     private final Player player1;
     private final Player player2;
+    private final List<Move> moves;
 
     public Game(int boardSize, Player player1, Player player2) {
         this.boardSize = boardSize;
@@ -16,6 +21,7 @@ public class Game {
         this.ko = null;
         this.player1 = player1;
         this.player2 = player2;
+        this.moves = new ArrayList<>();
     }
 
     public int getBoardSize() {
@@ -59,5 +65,9 @@ public class Game {
         // This is a private method because ko situation
         // is caused by doing a move.
         this.ko = ko;
+    }
+
+    public Move getNthMove(int moveIndex) {
+        return this.moves.get(moveIndex);
     }
 }
