@@ -2,7 +2,7 @@ package hyperweiqi.ai;
 
 import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.AI;
-import hyperweiqi.logic.Move;
+import hyperweiqi.domain.StoneLocation;
 
 public class AiPlayer extends Player {
 
@@ -11,7 +11,7 @@ public class AiPlayer extends Player {
     }
 
     @Override
-    public Move getMove() {
+    public StoneLocation getMove() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -2,16 +2,20 @@ package hyperweiqi.logic;
 
 import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.HUMAN;
+import hyperweiqi.domain.StoneLocation;
+import hyperweiqi.ui.Ui;
 
 public class HumanPlayer extends Player {
 
-    public HumanPlayer(String name) {
+    private final Ui ui;
+
+    public HumanPlayer(String name, Ui ui) {
         super(name, HUMAN);
+        this.ui = ui;
     }
 
     @Override
-    public Move getMove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public StoneLocation getMove() {
+        return this.ui.getMove();
     }
-
 }

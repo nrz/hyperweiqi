@@ -1,7 +1,5 @@
 package hyperweiqi.domain;
 
-import hyperweiqi.logic.Move;
-
 public abstract class Player {
     
     private String name;
@@ -27,6 +25,6 @@ public abstract class Player {
     public Type getType() {
         return this.type;
     }
-    
-    abstract public Move getMove();
+
+    abstract public StoneLocation getMove();
 }
