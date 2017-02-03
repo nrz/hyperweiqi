@@ -24,6 +24,9 @@ http://www.etymonline.com/index.php?search=hyper
 Description and structure of topic can be found in
 [descriptionAndStructureOfTopic.md](documentation/descriptionAndStructureOfTopic.md).
 
+Class diagram:
+[classDiagram.png](documentation/classDiagram.png).
+
 Time tracking can be found in
 [timeTracking.md](documentation/timeTracking.md).
 
