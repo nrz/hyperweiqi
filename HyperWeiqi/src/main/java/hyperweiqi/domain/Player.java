@@ -1,10 +1,10 @@
 package hyperweiqi.domain;
 
 public abstract class Player {
-    
+
     private String name;
     private final Type type;
-    
+
     public enum Type {
         HUMAN, AI
     }

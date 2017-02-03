@@ -41,12 +41,12 @@ public class Game {
     public Player getPlayer2() {
         return this.player2;
     }
-    
+
     public boolean doMove() {
         // If move is legal, it is executed and true is returned.
         // Otherwise (if move is illegal) false is returned.
         // This method also updates information about moves and ko situations.
-        
+
         // TODO: implement this method!
         return false;
     }
