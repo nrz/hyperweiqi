@@ -33,6 +33,11 @@ public class Stone {
         return this.location.getY();
     }
 
+    public int getLiberties() {
+        // TODO: implement this using Group class!
+        return -1;
+    }
+
     public boolean isCaptured() {
         return this.captured;
     }
