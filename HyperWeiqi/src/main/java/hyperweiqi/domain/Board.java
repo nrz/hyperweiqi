@@ -11,10 +11,14 @@ public class Board {
     // Locations map is to provide access from stones to locations.
     private final Map<Stone, StoneLocation> locations;
 
+    // Groups map is to provide access from stones to groups.
+    private final Map<Stone, Group> groups;
+
     public Board(int size) {
         this.size = size;
         this.board = new Stone[size][size];
         this.locations = new HashMap<>();
+        this.groups = new HashMap<>();
     }
 
     public int getSize() {
