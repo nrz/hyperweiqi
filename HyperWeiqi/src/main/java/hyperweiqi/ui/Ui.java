@@ -55,6 +55,10 @@ public abstract class Ui {
         game.start();
     }
 
+    public Logic getLogic() {
+        return this.logic;
+    }
+
     abstract public int getBoardSize();
 
     abstract public Player.Type getPlayerType();
