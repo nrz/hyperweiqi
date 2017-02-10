@@ -4,6 +4,10 @@ import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.AI;
 import hyperweiqi.domain.StoneLocation;
 
+/**
+ *
+ * @author antti
+ */
 public class AiPlayer extends Player {
 
     public AiPlayer(String name) {

@@ -7,6 +7,10 @@ import hyperweiqi.ui.Ui;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *
+ * @author antti
+ */
 public class Main {
 
     public static void main(String[] args) {

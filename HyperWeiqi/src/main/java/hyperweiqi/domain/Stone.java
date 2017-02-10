@@ -1,5 +1,9 @@
 package hyperweiqi.domain;
 
+/**
+ *
+ * @author antti
+ */
 public class Stone {
 
     private final Color color;

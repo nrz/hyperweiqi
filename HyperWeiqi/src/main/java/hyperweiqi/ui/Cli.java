@@ -8,6 +8,10 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ *
+ * @author antti
+ */
 public class Cli extends Ui {
 
     private final Scanner scanner;

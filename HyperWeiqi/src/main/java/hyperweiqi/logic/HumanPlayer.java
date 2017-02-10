@@ -5,6 +5,10 @@ import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.ui.Ui;
 
+/**
+ *
+ * @author antti
+ */
 public class HumanPlayer extends Player {
 
     private final Ui ui;

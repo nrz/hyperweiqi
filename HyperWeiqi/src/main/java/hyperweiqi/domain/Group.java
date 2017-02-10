@@ -3,6 +3,10 @@ package hyperweiqi.domain;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *
+ * @author antti
+ */
 public class Group {
 
     // Group is a group of stones connected with horizontally and/or vertically.

@@ -5,6 +5,10 @@ import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
 
+/**
+ *
+ * @author antti
+ */
 public class Gui extends Ui {
 
     public Gui(Logic logic) {

@@ -3,6 +3,10 @@ package hyperweiqi.domain;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *
+ * @author antti
+ */
 public class Board {
 
     private final int size;

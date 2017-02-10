@@ -9,6 +9,10 @@ import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.HumanPlayer;
 import hyperweiqi.logic.Logic;
 
+/**
+ *
+ * @author antti
+ */
 public abstract class Ui {
 
     private final Logic logic;

@@ -1,5 +1,9 @@
 package hyperweiqi.domain;
 
+/**
+ *
+ * @author antti
+ */
 public abstract class Player {
 
     private String name;
