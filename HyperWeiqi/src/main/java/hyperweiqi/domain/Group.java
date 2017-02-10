@@ -8,10 +8,13 @@ import java.util.Map;
  */
 public class Group {
 
+    private final Board board;
+
     // Group is a group of stones connected with horizontally and/or vertically.
     private final Map<StoneLocation, Stone> stones;
 
-    public Group() {
+    public Group(Board board) {
+        this.board = board;
         this.stones = new HashMap<>();
     }
 
