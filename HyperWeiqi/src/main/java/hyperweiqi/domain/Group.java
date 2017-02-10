@@ -9,7 +9,6 @@ import java.util.Map;
 public class Group {
 
     // Group is a group of stones connected with horizontally and/or vertically.
-
     private final Map<StoneLocation, Stone> stones;
 
     public Group() {

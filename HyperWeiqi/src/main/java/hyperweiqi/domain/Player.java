@@ -10,6 +10,7 @@ public abstract class Player {
     private final Type type;
 
     public enum Type {
+
         HUMAN, AI
     }
 
