@@ -1,22 +1,20 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.domain.Player;
+import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
+import hyperweiqi.logic.Logic;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Cli implements Ui {
+public class Cli extends Ui {
 
     private final Scanner scanner;
 
-    public Cli() {
+    public Cli(Logic logic) {
+        super(logic);
         this.scanner = new Scanner(System.in);
-    }
-
-    private boolean validateInput(String input) {
-        // Validate the input.
-        // The input format should be: `\s*[0-9]+\s*,\s*[0-9]+\s*`.
-        return input.matches("\\s*[0-9]+\\s*,\\s*[0-9]+\\s*");
     }
 
     @Override
@@ -42,5 +40,29 @@ public class Cli implements Ui {
 
             return new StoneLocation(x, y);
         }
+    }
+
+    @Override
+    public int getBoardSize() {
+        // TODO: implement this function
+        return 19;
+    }
+
+    @Override
+    public Player.Type getPlayer1Type() {
+        // TODO: implement this function
+        return HUMAN;
+    }
+
+    @Override
+    public Player.Type getPlayer2Type() {
+        // TODO: implement this function
+        return HUMAN;
+    }
+
+    private boolean validateInput(String input) {
+        // Validate the input.
+        // The input format should be: `\s*[0-9]+\s*,\s*[0-9]+\s*`.
+        return input.matches("\\s*[0-9]+\\s*,\\s*[0-9]+\\s*");
     }
 }

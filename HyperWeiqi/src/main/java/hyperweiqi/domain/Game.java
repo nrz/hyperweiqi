@@ -1,6 +1,7 @@
 package hyperweiqi.domain;
 
 import hyperweiqi.logic.Move;
+import hyperweiqi.ui.Ui;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +14,9 @@ public class Game {
     private final Player player1;
     private final Player player2;
     private final List<Move> moves;
+    private final Ui ui;
 
-    public Game(int boardSize, Player player1, Player player2) {
+    public Game(int boardSize, Player player1, Player player2, Ui ui) {
         this.boardSize = boardSize;
         this.board = new Board(this.boardSize);
         this.moveIndex = 0;
@@ -22,6 +24,11 @@ public class Game {
         this.player1 = player1;
         this.player2 = player2;
         this.moves = new ArrayList<>();
+        this.ui = ui;
+    }
+
+    public void start() {
+        // To start the game.
     }
 
     public int getBoardSize() {
