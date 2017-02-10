@@ -28,13 +28,7 @@ public class Gui extends Ui {
     }
 
     @Override
-    public Player.Type getPlayer1Type() {
-        // TODO: implement this function
-        return HUMAN;
-    }
-
-    @Override
-    public Player.Type getPlayer2Type() {
+    public Player.Type getPlayerType() {
         // TODO: implement this function
         return HUMAN;
     }

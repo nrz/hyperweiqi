@@ -24,8 +24,8 @@ public abstract class Ui {
 
     public void start() {
         int boardSize = this.getBoardSize();
-        Player.Type player1Type = this.getPlayer1Type();
-        Player.Type player2Type = this.getPlayer2Type();
+        Player.Type player1Type = this.getPlayerType();
+        Player.Type player2Type = this.getPlayerType();
 
         Player player1;
         Player player2;
@@ -53,9 +53,7 @@ public abstract class Ui {
 
     abstract public int getBoardSize();
 
-    abstract public Player.Type getPlayer1Type();
-
-    abstract public Player.Type getPlayer2Type();
+    abstract public Player.Type getPlayerType();
 
     abstract public StoneLocation getMove();
 }

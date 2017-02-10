@@ -49,13 +49,8 @@ public class Cli extends Ui {
     }
 
     @Override
-    public Player.Type getPlayer1Type() {
-        // TODO: implement this function
-        return HUMAN;
-    }
+    public Player.Type getPlayerType() {
 
-    @Override
-    public Player.Type getPlayer2Type() {
         // TODO: implement this function
         return HUMAN;
     }
