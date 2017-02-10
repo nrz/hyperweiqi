@@ -1,8 +1,7 @@
 package hyperweiqi.domain;
 
 /**
- *
- * @author antti
+ * Stone class provides functionality related to a single stone.
  */
 public class Stone {
 

@@ -9,8 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
- * @author antti
+ * Cli class provides an implementation of command-line interface.
  */
 public class Cli extends Ui {
 

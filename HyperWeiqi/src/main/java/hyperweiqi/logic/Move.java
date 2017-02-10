@@ -4,8 +4,8 @@ import hyperweiqi.domain.Stone;
 import hyperweiqi.domain.StoneLocation;
 
 /**
- *
- * @author antti
+ * Move class contains data related to a single game move and provides related
+ * functionality.
  */
 public class Move {
 

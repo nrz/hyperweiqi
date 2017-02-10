@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author antti
+ * Board class which provides several functions related to the game board.
  */
 public class Board {
 

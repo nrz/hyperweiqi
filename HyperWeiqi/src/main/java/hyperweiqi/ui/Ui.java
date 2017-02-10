@@ -10,8 +10,8 @@ import hyperweiqi.logic.HumanPlayer;
 import hyperweiqi.logic.Logic;
 
 /**
- *
- * @author antti
+ * Abstract class Ui functions as a common interface for command-line interface
+ * & graphical user interface. Both Cli and Gui extend Ui class.
  */
 public abstract class Ui {
 

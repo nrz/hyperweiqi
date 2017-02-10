@@ -8,8 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
- * @author antti
+ * Main class which simple creates a Logic object, user interface (Ui object)
+ * and then starts the user interface.
  */
 public class Main {
 

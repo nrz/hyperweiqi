@@ -1,8 +1,7 @@
 package hyperweiqi.logic;
 
 /**
- *
- * @author antti
+ * Logic is a top-level logic class.
  */
 public class Logic {
 

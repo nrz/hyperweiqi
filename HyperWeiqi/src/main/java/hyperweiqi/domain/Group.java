@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author antti
+ * Group class provides functions for checking the state of a group of stones.
  */
 public class Group {
 

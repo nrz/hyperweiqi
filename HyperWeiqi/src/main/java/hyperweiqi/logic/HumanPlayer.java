@@ -6,8 +6,8 @@ import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.ui.Ui;
 
 /**
- *
- * @author antti
+ * HumanPlayer class provides functionality to get move input from a human,
+ * using a given user interface.
  */
 public class HumanPlayer extends Player {
 

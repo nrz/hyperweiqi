@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
- * @author antti
+ * Sgf class provides functions for processing files in Smart Game Format (SGF).
+ * http://senseis.xmp.net/?SGFFile
  */
 public class Sgf {
 

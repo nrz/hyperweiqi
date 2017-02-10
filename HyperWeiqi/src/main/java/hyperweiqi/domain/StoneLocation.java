@@ -1,8 +1,8 @@
 package hyperweiqi.domain;
 
 /**
- *
- * @author antti
+ * StoneLocation class contains x and y coordinates and provides related
+ * functionality.
  */
 public class StoneLocation {
 

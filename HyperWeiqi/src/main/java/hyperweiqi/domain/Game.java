@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author antti
+ * Game class which provides general game-related functionality.
  */
 public class Game {
 

@@ -6,8 +6,7 @@ import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
 
 /**
- *
- * @author antti
+ * Gui class provides an implementation of a graphical user interface.
  */
 public class Gui extends Ui {
 

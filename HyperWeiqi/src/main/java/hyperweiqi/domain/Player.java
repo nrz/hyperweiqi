@@ -1,8 +1,8 @@
 package hyperweiqi.domain;
 
 /**
- *
- * @author antti
+ * Abstract class Player functions as a common interface for human & AI players.
+ * Both HumanPlayer and AiPlayer extend Player class.
  */
 public abstract class Player {
 
