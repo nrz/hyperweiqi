@@ -1,7 +1,7 @@
 package hyperweiqi.domain;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class StoneLocationTest {
 
@@ -16,5 +16,4 @@ public class StoneLocationTest {
         assertEquals(location.getX(), x);
         assertEquals(location.getY(), y);
     }
-
 }
