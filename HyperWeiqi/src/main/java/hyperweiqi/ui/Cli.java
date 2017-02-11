@@ -1,8 +1,13 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.domain.Board;
+import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.AI;
 import static hyperweiqi.domain.Player.Type.HUMAN;
+import hyperweiqi.domain.Stone;
+import static hyperweiqi.domain.Stone.Color.BLACK;
+import static hyperweiqi.domain.Stone.Color.WHITE;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
 import java.util.Scanner;
@@ -26,6 +31,29 @@ public class Cli extends Ui {
      */
     @Override
     protected void createComponents() {
+    }
+
+    @Override
+    public void drawGameState(Game game) {
+        Board board = game.getBoard();
+
+        for (int x = 0; x < board.getSize(); x++) {
+            for (int y = 0; y < board.getSize(); y++) {
+                Stone stone = board.at(x, y);
+                char stoneChar;
+                if (stone == null) {
+                    stoneChar = '.';
+                } else if (stone.getColor() == BLACK) {
+                    stoneChar = 'B';
+                } else if (stone.getColor() == WHITE) {
+                    stoneChar = 'W';
+                } else {
+                    stoneChar = '.';
+                }
+                System.out.print(stoneChar);
+            }
+            System.out.println();
+        }
     }
 
     @Override

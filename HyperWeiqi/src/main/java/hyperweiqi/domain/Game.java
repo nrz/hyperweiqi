@@ -32,6 +32,7 @@ public class Game {
 
     public void start() {
         // To start the game.
+        this.ui.drawGameState(this);
     }
 
     public int getBoardSize() {

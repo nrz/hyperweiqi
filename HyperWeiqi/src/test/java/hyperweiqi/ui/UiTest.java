@@ -1,5 +1,6 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
@@ -19,6 +20,11 @@ public class UiTest {
 
             @Override
             public int getBoardSize() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void drawGameState(Game game) {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
 

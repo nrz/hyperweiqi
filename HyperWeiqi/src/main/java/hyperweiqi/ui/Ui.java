@@ -1,5 +1,6 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
@@ -52,6 +53,13 @@ public abstract class Ui {
      * @return
      */
     abstract public Player.Type getPlayer2Type();
+
+    /**
+     * A method for drawing the current game state on screen.
+     *
+     * @param game
+     */
+    abstract public void drawGameState(Game game);
 
     /**
      * A method for getting the next move (StoneLocation). Command-line

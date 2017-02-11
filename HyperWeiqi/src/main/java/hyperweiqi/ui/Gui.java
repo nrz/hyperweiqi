@@ -1,5 +1,6 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
@@ -43,6 +44,11 @@ public class Gui extends Ui {
 
     @Override
     public void start() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void drawGameState(Game game) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
