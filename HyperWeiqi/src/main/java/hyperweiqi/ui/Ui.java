@@ -1,12 +1,7 @@
 package hyperweiqi.ui;
 
-import hyperweiqi.ai.AiPlayer;
-import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
-import static hyperweiqi.domain.Player.Type.AI;
-import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
-import hyperweiqi.logic.HumanPlayer;
 import hyperweiqi.logic.Logic;
 
 /**
@@ -27,32 +22,9 @@ public abstract class Ui {
     }
 
     public void start() {
-        int boardSize = this.getBoardSize();
-        Player.Type player1Type = this.getPlayerType();
-        Player.Type player2Type = this.getPlayerType();
-
-        Player player1;
-        Player player2;
-
-        if (player1Type == HUMAN) {
-            player1 = new HumanPlayer("human player #1", this);
-        } else if (player1Type == AI) {
-            player1 = new AiPlayer("AI player #1");
-        } else {
-            player1 = new HumanPlayer("human player #1", this);
-        }
-
-        if (player2Type == HUMAN) {
-            player2 = new HumanPlayer("human player #2", this);
-        } else if (player2Type == AI) {
-            player2 = new AiPlayer("AI player #2");
-        } else {
-            player2 = new HumanPlayer("human player #2", this);
-        }
-
-        Game game = new Game(boardSize, player1, player2, this);
-
-        game.start();
+        this.createComponents();
+        this.logic.setUi(this);
+        this.logic.start();
     }
 
     public Logic getLogic() {
@@ -61,7 +33,38 @@ public abstract class Ui {
 
     abstract public int getBoardSize();
 
-    abstract public Player.Type getPlayerType();
+    /**
+     * A method for getting Player.Type of player 1. Command-line interfaces
+     * typically implement this by asking the user upon call of this method,
+     * whereas graphical user interfaces typically return the currently selected
+     * value of player type.
+     *
+     * @return
+     */
+    abstract public Player.Type getPlayer1Type();
 
+    /**
+     * A method for getting Player.Type of player 2. Command-line interfaces
+     * typically implement this by asking the user upon call of this method,
+     * whereas graphical user interfaces typically return the currently selected
+     * value of player type.
+     *
+     * @return
+     */
+    abstract public Player.Type getPlayer2Type();
+
+    /**
+     * A method for getting the next move (StoneLocation). Command-line
+     * interfaces typically implement this by asking the user upon call of this
+     * method, whereas graphical user interfaces typically return the currently
+     * selected value of player type.
+     *
+     * @return
+     */
     abstract public StoneLocation getMove();
+
+    /**
+     * A method for initializing the user interface before starting the logic.
+     */
+    abstract protected void createComponents();
 }

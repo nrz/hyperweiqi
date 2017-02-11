@@ -1,6 +1,7 @@
 package hyperweiqi.ui;
 
 import hyperweiqi.domain.Player;
+import static hyperweiqi.domain.Player.Type.AI;
 import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
@@ -18,6 +19,13 @@ public class Cli extends Ui {
     public Cli(Logic logic) {
         super(logic);
         this.scanner = new Scanner(System.in);
+    }
+
+    /**
+     * Nothing to do here, as this class does not create any components.
+     */
+    @Override
+    protected void createComponents() {
     }
 
     @Override
@@ -47,15 +55,44 @@ public class Cli extends Ui {
 
     @Override
     public int getBoardSize() {
-        // TODO: implement this function
-        return 19;
+        while (true) {
+            System.out.print("Board size: ");
+            String boardSizeString = this.scanner.nextLine();
+
+            try {
+                int boardSize = Integer.parseInt(boardSizeString);
+                if (boardSize < 1 || boardSize > 101) {
+                    System.out.println("Invalid input. Board size must be an integer between 1 and 101.");
+                    continue;
+                }
+                return boardSize;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Board size must be an integer between 1 and 101.");
+            }
+        }
     }
 
     @Override
-    public Player.Type getPlayerType() {
+    public Player.Type getPlayer1Type() {
+        return this.getPlayerType(1);
+    }
 
-        // TODO: implement this function
-        return HUMAN;
+    @Override
+    public Player.Type getPlayer2Type() {
+        return this.getPlayerType(2);
+    }
+
+    private Player.Type getPlayerType(int playerId) {
+        while (true) {
+            System.out.print("Player type (human/ai) of player " + playerId + ": ");
+            String playerType = this.scanner.nextLine();
+            if (playerType.toLowerCase().matches("human")) {
+                return HUMAN;
+            } else if (playerType.toLowerCase().matches("ai")) {
+                return AI;
+            }
+            System.out.println("Player type must be either \"human\" or \"ai\"!");
+        }
     }
 
     private boolean validateInput(String input) {

@@ -13,17 +13,27 @@ public class UiTest {
         Ui ui = new Ui(logic) {
 
             @Override
+            protected void createComponents() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
             public int getBoardSize() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
 
             @Override
-            public Player.Type getPlayerType() {
+            public StoneLocation getMove() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
 
             @Override
-            public StoneLocation getMove() {
+            public Player.Type getPlayer1Type() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public Player.Type getPlayer2Type() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
         };
