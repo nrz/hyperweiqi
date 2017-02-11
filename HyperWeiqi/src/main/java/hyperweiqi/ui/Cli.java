@@ -84,11 +84,15 @@ public class Cli extends Ui {
     @Override
     public int getBoardSize() {
         while (true) {
-            System.out.print("Board size: ");
+            System.out.print("Board size (Enter defaults to 19): ");
             String boardSizeString = this.scanner.nextLine();
 
+            if (boardSizeString.trim().isEmpty()) {
+                return 19; // standard-sized board is the default.
+            }
+
             try {
-                int boardSize = Integer.parseInt(boardSizeString);
+                int boardSize = Integer.parseInt(boardSizeString.trim());
                 if (boardSize < 1 || boardSize > 101) {
                     System.out.println("Invalid input. Board size must be an integer between 1 and 101.");
                     continue;
