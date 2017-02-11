@@ -112,11 +112,13 @@ public class Cli extends Ui {
 
     private Player.Type getPlayerType(int playerId) {
         while (true) {
-            System.out.print("Player type (human/ai) of player " + playerId + ": ");
+            System.out.print("Player type (human/ai) of player " + playerId + " (Enter defaults to HUMAN): ");
             String playerType = this.scanner.nextLine();
-            if (playerType.toLowerCase().matches("human")) {
+            if (playerType.trim().isEmpty()) {
                 return HUMAN;
-            } else if (playerType.toLowerCase().matches("ai")) {
+            } else if (playerType.trim().toLowerCase().matches("human")) {
+                return HUMAN;
+            } else if (playerType.trim().toLowerCase().matches("ai")) {
                 return AI;
             }
             System.out.println("Player type must be either \"human\" or \"ai\"!");
