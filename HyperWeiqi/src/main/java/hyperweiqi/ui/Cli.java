@@ -31,7 +31,7 @@ public class Cli extends Ui {
     @Override
     public StoneLocation getMove() {
         while (true) {
-            System.out.println("Give your move: ");
+            System.out.print("Give your move: ");
             String input = this.scanner.nextLine();
 
             if (!this.validateInput(input)) {
