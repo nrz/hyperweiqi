@@ -114,6 +114,29 @@ public class Cli extends Ui {
         return this.getPlayerType(2);
     }
 
+    @Override
+    public int getHandicap() {
+        while (true) {
+            System.out.print("Number of handicap stones (Enter defaults to no handicap): ");
+            String boardSizeString = this.scanner.nextLine();
+
+            if (boardSizeString.trim().isEmpty()) {
+                return 0; // standard-sized board is the default.
+            }
+
+            try {
+                int numberOfHandicapStones = Integer.parseInt(boardSizeString.trim());
+                if (numberOfHandicapStones < 0 || numberOfHandicapStones > 9) {
+                    System.out.println("Invalid input. Number of handicap stones must be an integer between 0 and 9.");
+                    continue;
+                }
+                return numberOfHandicapStones;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Number of handicap stones must be an integer between 0 and 9.");
+            }
+        }
+    }
+
     private Player.Type getPlayerType(int playerId) {
         while (true) {
             System.out.print("Player type (human/ai) of player " + playerId + " (Enter defaults to HUMAN): ");

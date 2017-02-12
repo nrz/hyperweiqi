@@ -24,7 +24,6 @@ public abstract class Ui {
 
     public void start() {
         this.createComponents();
-        this.logic.setUi(this);
         this.logic.start();
     }
 
@@ -53,6 +52,20 @@ public abstract class Ui {
      * @return
      */
     abstract public Player.Type getPlayer2Type();
+
+    /**
+     * A method for the number of handicap stones given for black. 0 means no
+     * handicap stones, in which case black begins the game. 1..9 means is a
+     * valid number of handicap stones, white begins the game after the handicap
+     * stones given to black are set on board. Negative values should be dealt
+     * as no handicap (0) and any value greater than 9 should be dealt like 9 (a
+     * handicap of 9 stones).
+     *
+     * @return
+     */
+    public int getHandicap() {
+        return this.logic.getGame().getHandicap();
+    }
 
     /**
      * A method for drawing the current game state on screen.

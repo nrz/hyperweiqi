@@ -5,52 +5,64 @@ import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
 import static hyperweiqi.domain.Player.Type.AI;
 import static hyperweiqi.domain.Player.Type.HUMAN;
-import hyperweiqi.ui.Ui;
 
 /**
  * Logic is a top-level logic class.
  */
 public class Logic {
 
-    private Ui ui;
+    private final static int DEFAULT_BOARD_SIZE = 19;
+    private final static Player.Type DEFAULT_PLAYER1_TYPE = HUMAN;
+    private final static Player.Type DEFAULT_PLAYER2_TYPE = HUMAN;
+    private final static int DEFAULT_HANDICAP = 0;
+
+    private Game game;
 
     public Logic() {
-        this.ui = null;
-    }
+        int boardSize = Logic.DEFAULT_BOARD_SIZE;
 
-    public void setUi(Ui ui) {
-        this.ui = ui;
-    }
-
-    public void start() {
-
-        int boardSize = this.ui.getBoardSize();
-        Player.Type player1Type = this.ui.getPlayer1Type();
-        Player.Type player2Type = this.ui.getPlayer2Type();
+        Player.Type player1Type = Logic.DEFAULT_PLAYER1_TYPE;
 
         Player player1;
-        Player player2;
 
         if (player1Type == HUMAN) {
-            player1 = new HumanPlayer("human player #1", this.ui);
+            player1 = new HumanPlayer("human player #1");
         } else if (player1Type == AI) {
             player1 = new AiPlayer("AI player #1");
         } else {
-            player1 = new HumanPlayer("human player #1", this.ui);
+            player1 = new HumanPlayer("human player #1");
         }
+
+        Player.Type player2Type = Logic.DEFAULT_PLAYER2_TYPE;
+
+        Player player2;
 
         if (player2Type == HUMAN) {
-            player2 = new HumanPlayer("human player #2", this.ui);
-        } else if (player2Type == AI) {
+            player2 = new HumanPlayer("human player #2");
+        } else if (player1Type == AI) {
             player2 = new AiPlayer("AI player #2");
         } else {
-            player2 = new HumanPlayer("human player #2", this.ui);
+            player2 = new HumanPlayer("human player #2");
         }
 
-        Game game = new Game(boardSize, player1, player2, this.ui);
+        int handicap = Logic.DEFAULT_HANDICAP;
 
-        game.start();
+        this.game = new Game(boardSize, player1, player2, handicap);
+    }
 
+    public int getHandicap() {
+        return this.game.getHandicap();
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public void start() {
         while (true) {
             System.out.println("Running...");
             break;

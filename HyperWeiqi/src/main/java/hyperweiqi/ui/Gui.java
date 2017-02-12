@@ -1,9 +1,12 @@
 package hyperweiqi.ui;
 
+import hyperweiqi.ai.AiPlayer;
 import hyperweiqi.domain.Game;
 import hyperweiqi.domain.Player;
+import static hyperweiqi.domain.Player.Type.AI;
 import static hyperweiqi.domain.Player.Type.HUMAN;
 import hyperweiqi.domain.StoneLocation;
+import hyperweiqi.logic.HumanPlayer;
 import hyperweiqi.logic.Logic;
 import javax.swing.JFrame;
 
@@ -12,27 +15,28 @@ import javax.swing.JFrame;
  */
 public class Gui extends Ui {
 
-    private Player.Type player1Type;
-    private Player.Type player2Type;
-    private int boardSize;
-
     public Gui(Logic logic) {
         super(logic);
-
-        // Human players by default.
-        this.player1Type = HUMAN;
-        this.player2Type = HUMAN;
-
-        // Standard-sized board by default.
-        this.boardSize = 19;
     }
 
     public void setPlayer1Type(Player.Type player1Type) {
-        this.player1Type = player1Type;
+        String playerName = super.getLogic().getGame().getPlayer1().getName();
+
+        if (player1Type == HUMAN) {
+            super.getLogic().getGame().setPlayer1(new HumanPlayer(playerName));
+        } else if (player1Type == AI) {
+            super.getLogic().getGame().setPlayer1(new AiPlayer(playerName));
+        }
     }
 
     public void setPlayer2Type(Player.Type player2Type) {
-        this.player2Type = player2Type;
+        String playerName = super.getLogic().getGame().getPlayer2().getName();
+
+        if (player2Type == HUMAN) {
+            super.getLogic().getGame().setPlayer2(new HumanPlayer(playerName));
+        } else if (player2Type == AI) {
+            super.getLogic().getGame().setPlayer2(new AiPlayer(playerName));
+        }
     }
 
     @Override
@@ -59,16 +63,16 @@ public class Gui extends Ui {
 
     @Override
     public int getBoardSize() {
-        return this.boardSize;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Player.Type getPlayer1Type() {
-        return this.player1Type;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Player.Type getPlayer2Type() {
-        return this.player2Type;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

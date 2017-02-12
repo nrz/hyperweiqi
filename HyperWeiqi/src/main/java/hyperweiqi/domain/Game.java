@@ -1,7 +1,6 @@
 package hyperweiqi.domain;
 
 import hyperweiqi.logic.Move;
-import hyperweiqi.ui.Ui;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,25 +13,24 @@ public class Game {
     private final Board board;
     private int moveIndex;
     private StoneLocation ko;
-    private final Player player1;
-    private final Player player2;
+    private Player player1;
+    private Player player2;
+    private final int handicap;
     private final List<Move> moves;
-    private final Ui ui;
 
-    public Game(int boardSize, Player player1, Player player2, Ui ui) {
+    public Game(int boardSize, Player player1, Player player2, int handicap) {
         this.boardSize = boardSize;
         this.board = new Board(this.boardSize);
         this.moveIndex = 0;
         this.ko = null;
         this.player1 = player1;
         this.player2 = player2;
+        this.handicap = handicap;
         this.moves = new ArrayList<>();
-        this.ui = ui;
     }
 
     public void start() {
         // To start the game.
-        this.ui.drawGameState(this);
     }
 
     public int getBoardSize() {
@@ -41,6 +39,10 @@ public class Game {
 
     public Board getBoard() {
         return this.board;
+    }
+
+    public int getHandicap() {
+        return this.handicap;
     }
 
     public int getMoveIndex() {
@@ -55,8 +57,30 @@ public class Game {
         return this.player1;
     }
 
+    public void setPlayer1(Player player1) {
+        this.player1 = player1;
+    }
+
     public Player getPlayer2() {
         return this.player2;
+    }
+
+    public void setPlayer2(Player player2) {
+        this.player2 = player2;
+    }
+
+    public Player.Type getPlayer1Type() {
+        if (this.player1 == null) {
+            return null;
+        }
+        return this.player1.getType();
+    }
+
+    public Player.Type getPlayer2Type() {
+        if (this.player2 == null) {
+            return null;
+        }
+        return this.player2.getType();
     }
 
     public boolean doMove() {
