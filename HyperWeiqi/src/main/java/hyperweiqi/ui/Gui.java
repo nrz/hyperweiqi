@@ -25,6 +25,11 @@ public class Gui extends Ui {
     }
 
     @Override
+    public boolean isSwing() {
+        return true;
+    }
+
+    @Override
     public void run() {
         // Swing stuff.
         String title = "HyperWeiqi";

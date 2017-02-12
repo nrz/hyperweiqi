@@ -6,6 +6,7 @@ import hyperweiqi.ui.Gui;
 import hyperweiqi.ui.Ui;
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.SwingUtilities;
 
 /**
  * Main class which simple creates a Logic object, user interface (Ui object)
@@ -33,6 +34,10 @@ public class Main {
             ui = new Cli(logic);
         }
 
-        ui.run();
+        if (ui.isSwing()) {
+            SwingUtilities.invokeLater(ui); // Swing-specific code.
+        } else {
+            ui.run();
+        }
     }
 }

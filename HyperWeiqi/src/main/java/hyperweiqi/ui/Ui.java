@@ -22,6 +22,11 @@ public abstract class Ui implements Runnable {
         this.logic = logic;
     }
 
+    public boolean isSwing() {
+        // By default user is neither Swing nor anything else in particular.
+        return false;
+    }
+
     public void start() {
         this.logic.start();
     }
