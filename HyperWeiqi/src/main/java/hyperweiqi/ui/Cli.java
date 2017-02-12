@@ -10,14 +10,20 @@ import static hyperweiqi.domain.Stone.Color.BLACK;
 import static hyperweiqi.domain.Stone.Color.WHITE;
 import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.logic.Logic;
+import java.awt.Container;
+import java.awt.Dimension;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 /**
  * Cli class provides an implementation of command-line interface.
  */
 public class Cli extends Ui {
+
+    private JFrame jframe;
 
     private final Scanner scanner;
 
@@ -26,11 +32,24 @@ public class Cli extends Ui {
         this.scanner = new Scanner(System.in);
     }
 
-    /**
-     * Nothing to do here, as this class does not create any components.
-     */
     @Override
-    protected void createComponents() {
+    public void run() {
+        // Swing stuff.
+        String title = "HyperWeiqi";
+        this.jframe = new JFrame(title);
+        this.jframe.setPreferredSize(new Dimension(1000, 1000));
+        this.jframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.createComponents(this.jframe.getContentPane());
+        this.jframe.pack();
+    }
+
+    /**
+     * Create the necessary components for a command-line interface.
+     *
+     * @param container
+     */
+    protected void createComponents(Container container) {
+
     }
 
     @Override

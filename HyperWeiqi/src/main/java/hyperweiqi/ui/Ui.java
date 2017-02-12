@@ -9,7 +9,7 @@ import hyperweiqi.logic.Logic;
  * Abstract class Ui functions as a common interface for command-line interface
  * & graphical user interface. Both Cli and Gui extend Ui class.
  */
-public abstract class Ui {
+public abstract class Ui implements Runnable {
 
     private final Logic logic;
 
@@ -23,13 +23,15 @@ public abstract class Ui {
     }
 
     public void start() {
-        this.createComponents();
         this.logic.start();
     }
 
     public Logic getLogic() {
         return this.logic;
     }
+
+    @Override
+    abstract public void run();
 
     abstract public int getBoardSize();
 
@@ -83,9 +85,4 @@ public abstract class Ui {
      * @return
      */
     abstract public StoneLocation getMove();
-
-    /**
-     * A method for initializing the user interface before starting the logic.
-     */
-    abstract protected void createComponents();
 }

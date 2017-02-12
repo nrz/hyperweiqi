@@ -17,7 +17,7 @@ public class Main {
         System.out.println("Welcome to HyperWeiqi!");
         Logic logic = new Logic();
 
-        Ui.Type uiType = Ui.Type.CLI;
+        Ui.Type uiType = Ui.Type.GUI;
 
         List<String> argsList = Arrays.asList(args);
 
@@ -33,6 +33,6 @@ public class Main {
             ui = new Cli(logic);
         }
 
-        ui.start();
+        ui.run();
     }
 }

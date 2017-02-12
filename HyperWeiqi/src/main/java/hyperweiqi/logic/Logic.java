@@ -63,9 +63,8 @@ public class Logic {
     }
 
     public void start() {
+        System.out.println("Running...");
         while (true) {
-            System.out.println("Running...");
-            break;
         }
     }
 }
