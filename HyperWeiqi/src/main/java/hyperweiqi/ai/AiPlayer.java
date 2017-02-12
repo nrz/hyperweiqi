@@ -5,8 +5,7 @@ import static hyperweiqi.domain.Player.Type.AI;
 import hyperweiqi.domain.StoneLocation;
 
 /**
- *
- * @author antti
+ * AiPlayer class provides AI functionality.
  */
 public class AiPlayer extends Player {
 
