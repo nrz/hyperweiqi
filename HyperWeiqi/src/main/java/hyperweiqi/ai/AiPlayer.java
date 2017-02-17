@@ -13,6 +13,11 @@ public class AiPlayer extends Player {
         super(name, AI);
     }
 
+    /**
+     * Function used to request the next move from the AI player.
+     *
+     * @return
+     */
     @Override
     public StoneLocation getMove() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
