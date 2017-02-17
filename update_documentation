@@ -1,0 +1,21 @@
+#!/bin/bash
+
+original_dir=$(pwd)
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+git reset
+
+# Create pit report.
+cd "$script_dir/HyperWeiqi"
+JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-x64 /usr/local/tmcbeans/java/maven/bin/mvn -f "$script_dir/HyperWeiqi/pom.xml" org.pitest:pitest-maven:mutationCoverage
+
+if [ -d "$script_dir/HyperWeiqi/target/site" ];
+then
+    # Delete the old Checkstyle report.
+    rm -rf "$script_dir/HyperWeiqi/target/site"
+fi
+
+# Create checkstyle report.
+JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-x64 /usr/local/tmcbeans/java/maven/bin/mvn -f "$script_dir/HyperWeiqi/pom.xml" jxr:jxr checkstyle:checkstyle
+
+cd "$original_dir"
