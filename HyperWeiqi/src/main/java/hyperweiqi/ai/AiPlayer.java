@@ -20,6 +20,7 @@ public class AiPlayer extends Player {
      */
     @Override
     public StoneLocation getMove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // TODO: implement this function.
+        return null;
     }
 }
