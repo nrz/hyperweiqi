@@ -30,4 +30,10 @@ Class diagram:
 Time tracking can be found in
 [timeTracking.md](documentation/timeTracking.md).
 
+Latest PIT report can be found in
+[index.html](documentation/pit/201702171704/index.html).
+
+Latest Checkstyle report can be found in
+[index.html](documentation/checkstyle/201702171704/checkstyle.html).
+
 Copyright (C) 2017 Antti Nuortimo.
