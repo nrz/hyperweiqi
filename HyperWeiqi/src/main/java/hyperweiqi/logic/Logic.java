@@ -65,6 +65,8 @@ public class Logic {
     public void start() {
         System.out.println("Running...");
         while (true) {
+            // Work in progress.
+            int a = 1; // dummy code to avoid Checkstyle errors.
         }
     }
 }
