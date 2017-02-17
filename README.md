@@ -31,9 +31,9 @@ Time tracking can be found in
 [timeTracking.md](documentation/timeTracking.md).
 
 Latest PIT report can be found in
-[index.html](documentation/pit/201702171704/index.html).
+[index.html](https://htmlpreview.github.io/?https://github.com/nrz/hyperweiqi/documentation/pit/201702171704/index.html).
 
 Latest Checkstyle report can be found in
-[index.html](documentation/checkstyle/201702171704/checkstyle.html).
+[index.html](https://htmlpreview.github.io/?https://github.com/nrz/hyperweiqi/documentation/checkstyle/201702171704/checkstyle.html).
 
 Copyright (C) 2017 Antti Nuortimo.
