@@ -55,7 +55,7 @@ public class Logic {
     }
 
     public Game getGame() {
-        return game;
+        return this.game;
     }
 
     public void setGame(Game game) {
