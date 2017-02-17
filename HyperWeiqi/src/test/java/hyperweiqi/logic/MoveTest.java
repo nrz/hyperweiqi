@@ -1,9 +1,9 @@
 package hyperweiqi.logic;
 
-import hyperweiqi.domain.StoneLocation;
 import hyperweiqi.domain.Stone;
+import hyperweiqi.domain.StoneLocation;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class MoveTest {
 

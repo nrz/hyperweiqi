@@ -15,13 +15,19 @@ public class Board {
     private final Map<Stone, StoneLocation> locations;
 
     // Groups map is to provide access from stones to groups.
-    private final Map<Stone, Group> groups;
+    private final Map<StoneLocation, Group> groups;
 
     public Board(int size) {
         this.size = size;
         this.board = new Stone[size][size];
         this.locations = new HashMap<>();
         this.groups = new HashMap<>();
+
+        for (int y = 0; y < size; y++) {
+            for (int x = 0; x < size; x++) {
+                this.board[y][x] = new Stone(Stone.Color.NO_STONE, x, y);
+            }
+        }
     }
 
     public int getSize() {
@@ -44,6 +50,12 @@ public class Board {
 
         this.board[y][x] = stone;
         this.locations.put(stone, location);
+
+        if (!this.groups.containsKey(location)) {
+            Group group = new Group(this);
+            this.groups.put(location, group);
+        }
+        stone.setBoard(this);
         return true;
     }
 
@@ -60,5 +72,13 @@ public class Board {
 
     private boolean checkCoordinates(int x, int y) {
         return (x >= 0 && x < this.size && y >= 0 && y < this.size);
+    }
+
+    public Group getGroup(StoneLocation location) {
+        return this.groups.get(location);
+    }
+
+    public Group getGroup(int x, int y) {
+        return this.getGroup(new StoneLocation(x, y));
     }
 }

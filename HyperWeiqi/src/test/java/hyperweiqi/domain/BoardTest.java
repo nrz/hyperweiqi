@@ -1,7 +1,6 @@
 package hyperweiqi.domain;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 public class BoardTest {
@@ -15,10 +14,10 @@ public class BoardTest {
         Board board = new Board(boardSize);
         assertEquals(board.getSize(), boardSize);
 
-        // Null everywhere on the board.
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                assertNull(board.at(i, j));
+        // No stones anywhere on the board.
+        for (int y = 0; y < boardSize; y++) {
+            for (int x = 0; x < boardSize; x++) {
+                assertEquals(board.at(x, y), new Stone(Stone.Color.NO_STONE, x, y));
             }
         }
     }
